@@ -1,0 +1,21 @@
+.contact-container {
+    margin: auto;
+    max-width: 600px;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .contact-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .contact-icon {
+    font-size: 3rem;
+    margin: 8px;
+    width: 0 0 calc(33.33% - 20px);
+    max-width: 100px; 
+    text-align: center;
+  }
+  

@@ -1,12 +1,10 @@
 import { Routes,Route, Navigate} from "react-router-dom";
 import NavBar from "./Components/NavBar";
-import Footer from "./Components/Footer";
 import HomePage from "./Components/HomePage";
 import Projects from "./Components/Projects";
-import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
-import History from "./Components/History";
-
+import WorkExperience from "./Components/WorkExperience";
+import Education from "./Components/Education"
 function App() {
   return (
     <div>
@@ -14,12 +12,11 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path="/projects" element={<Projects/>}/>
-        <Route path="/history" element={<History/>}/>
-        <Route path="/resume" element={<Resume/>}/>
+        <Route path="/experience" element={<WorkExperience/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/education" element={<Education/>}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-      <Footer/>
     </div>
   );
 }
