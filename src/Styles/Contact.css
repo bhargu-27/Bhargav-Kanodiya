@@ -1,3 +1,11 @@
+.contact-page {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #EDEADE;
+  overflow-y: auto;
+  height: calc(100vh - 40px);
+}
 .contact-container {
     margin: auto;
     max-width: 600px;

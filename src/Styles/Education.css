@@ -30,7 +30,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    max-height: 100px; /* Adjust as needed */
+    max-height: 100px;
     overflow-y: auto;
   }
   

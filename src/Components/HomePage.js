@@ -1,7 +1,8 @@
 import React from 'react';
 import './../Styles/HomePage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 function HomePage() {
   return (
     <div className="homepage">
@@ -25,6 +26,9 @@ function HomePage() {
         </div>
       </div>
       <div className="social-media-icons">
+        <a href='mailto:bjkanodiya42@gmail.com'>
+          <FontAwesomeIcon icon={faEnvelope} style={{color:"#333"}}/>
+        </a>
         <a href="https://www.linkedin.com/in/bhargavkanodiya42/">
           <FontAwesomeIcon icon={faLinkedin} style={{ color: '#333' }} />
         </a>
@@ -33,9 +37,6 @@ function HomePage() {
         </a>
         <a href="https://www.facebook.com/bhargav.kanodiya.9/">
           <FontAwesomeIcon icon={faFacebook} style={{ color: '#333' }} />
-        </a>
-        <a href="https://twitter.com/Bhargavpatel_27">
-          <FontAwesomeIcon icon={faTwitter} style={{ color: '#333' }} />
         </a>
         <a href="https://www.instagram.com/bhargav_patel_2742/">
           <FontAwesomeIcon icon={faInstagram} style={{ color: '#333' }} />

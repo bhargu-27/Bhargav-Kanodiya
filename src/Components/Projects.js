@@ -12,14 +12,17 @@ import './../Styles/Projects.css';
 
 const Projects = () => {
   const projectsData = [
-    // {
-    //   id: 1,
-    //   title: 'FinTastic - Your personal finance tracker',
-    //   link: 'https://fintastic-grp-14.netlify.app/',
-    //   timeline: 'Jan 2024 - Apr 2024',
-    //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    //   technologies: ['React', 'JavaScript', 'CSS'],
-    // },
+    {
+      id: 1,
+      title: 'FinTastic - Your personal finance tracker',
+      link: 'https://fintastic-grp-14.netlify.app/',
+      GitHub:'https://github.com/bhargu-27/Grp-14-Web-Deployment',
+      timeline: 'Jan 2024 - Apr 2024',
+      descriptionPoints: [`Developed a web application aimed at facilitating personal finance management, encompassing expense and reminder tracking, as well as goal setting through objective key results.`,
+        `Utilized ReactJs to design and implement prototypes, while leveraging Nodejs to establish seamless communication between the client and server via APIs.`,
+        `Prioritized user satisfaction and security by integrating a user-friendly design and ensuring secure data transfer within the application.`],
+      technologies: ['React.Js','Node.Js', 'Express.js','MongoDB'],
+    },
     {
       id: 2,
       title: 'AccoMatch',
@@ -68,19 +71,24 @@ const Projects = () => {
   };
 
   return (
-    <div className='project-page'>
+    <div className="project-page">
       <div className="project-list">
         {projectsData.map((project) => (
-          <Card key={project.id} className="project-item" raised={expandedProject === project.id}>
+          <Card
+            key={project.id}
+            className={`project-item ${expandedProject === project.id ? 'expanded' : ''}`}
+            raised={expandedProject === project.id}
+          >
             <div className="project-header" onClick={() => toggleProject(project.id)}>
               <Typography variant="h6">{project.title}</Typography>
               <Typography variant="body1">TechStack: {project.technologies.join(', ')}</Typography>
               <Typography variant="body2">Timeline: {project.timeline}</Typography>
             </div>
-            <Collapse in={expandedProject === project.id}>
-              <CardContent>
-                
-                <Typography variant="body1">Source Code: <a href={project.GitHub} target="_blank" rel="noopener noreferrer">{project.title}</a></Typography>
+            <Collapse in={expandedProject === project.id} timeout="auto" unmountOnExit>
+              <CardContent className="project-content">
+                <Typography variant="body1">
+                  Source Code: <a href={project.GitHub} target="_blank" rel="noopener noreferrer">{project.title}</a>
+                </Typography>
                 <Typography variant="body2">Description:</Typography>
                 <List>
                   {project.descriptionPoints.map((point, index) => (

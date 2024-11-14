@@ -15,6 +15,7 @@ const contacts = [
 
 const Contact = () => {
   return (
+    <div className="contact-page">
     <div className="contact-container">
       <Typography variant="h2" gutterBottom>Contact Me</Typography>
       <div className="contact-icons">
@@ -24,6 +25,7 @@ const Contact = () => {
           </a>
         ))}
       </div>
+    </div>
     </div>
   );
 }

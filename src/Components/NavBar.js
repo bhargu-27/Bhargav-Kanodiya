@@ -10,9 +10,6 @@ const Navbar = () => {
     const resumeUrl = './BhargavResume.pdf';
     window.open(resumeUrl, '_blank');
   }
-  const openContact=()=>{
-    navigate('/contact');
-}
 const openExperiences=()=>{
   navigate('/experience');
 }
@@ -35,7 +32,6 @@ const openProjects=()=>{
           <li className="menu-item" onClick={()=>openProjects()}>Projects</li>
           <li className="menu-item"onClick={()=>openExperiences()}>Experience</li>
           <li className='menu-item' onClick={()=>openStudy()}>Education</li>
-          <li className="menu-item" onClick={()=>openContact()}>Contact</li>
         </ul>
       </div>
     </nav>
